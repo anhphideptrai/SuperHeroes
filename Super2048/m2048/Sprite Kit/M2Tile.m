@@ -22,6 +22,8 @@ typedef void (^M2Block)();
 
   /** Pending function to call after @p _pendingActions are executed. */
   M2Block _pendingBlock;
+    
+ SKSpriteNode *_board;
 }
 
 
@@ -67,6 +69,14 @@ typedef void (^M2Block)();
     if (GSTATE.gameType == M2GameTypeFibonacci) self.level = arc4random_uniform(100) < 40 ? 1 : 2;
     else self.level = arc4random_uniform(100) < 95 ? 1 : 2;
     
+      if (_board) [_board removeFromParent];
+      
+      SKTexture *backgroundTexture = [SKTexture textureWithCGImage:[GSTATE imageForLevel:self.level].CGImage];
+      _board = [SKSpriteNode spriteNodeWithTexture:backgroundTexture];
+      [_board setScale:0.16];
+      _board.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+      [self addChild:_board];
+      
     [self refreshValue];
   }
   return self;
@@ -165,8 +175,10 @@ typedef void (^M2Block)();
   _value.text = [NSString stringWithFormat:@"%ld", value];
   _value.fontColor = [GSTATE textColorForLevel:self.level];
   _value.fontSize = [GSTATE textSizeForValue:value];
-  
+    [_value setHidden:YES];
   self.fillColor = [GSTATE colorForLevel:self.level];
+  SKTexture *backgroundTexture = [SKTexture textureWithCGImage:[GSTATE imageForLevel:self.level].CGImage];
+  [_board setTexture:backgroundTexture];
 }
 
 

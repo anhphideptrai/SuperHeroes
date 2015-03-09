@@ -151,6 +151,9 @@
   return [[M2Theme themeClassForType:self.theme] textColorForLevel:level];
 }
 
+- (UIImage*)imageForLevel:(NSInteger)level{
+    return [[M2Theme themeClassForType:self.theme] imageForLevel:level];
+}
 
 - (CGFloat)textSizeForValue:(NSInteger)value {
   NSInteger offset = self.dimension == 5 ? 2 : 0;

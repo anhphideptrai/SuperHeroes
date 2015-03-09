@@ -43,6 +43,8 @@
  */
 + (UIColor *)textColorForLevel:(NSInteger)level;
 
++ (UIImage *)imageForLevel:(NSInteger)level;
+
 @end
 
 

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "M2Position.h"
+#import <UIKit/UIImage.h>
 
 #define GSTATE [M2GlobalState state]
 #define Settings [NSUserDefaults standardUserDefaults]
@@ -73,6 +74,8 @@ typedef NS_ENUM(NSInteger, M2GameType) {
  * @return The color of the level.
  */
 - (UIColor *)colorForLevel:(NSInteger)level;
+
+- (UIImage*)imageForLevel:(NSInteger)level;
 
 /**
  * The text color of the specified level.

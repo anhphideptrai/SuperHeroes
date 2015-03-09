@@ -54,6 +54,42 @@
   }
 }
 
++ (UIImage *)imageForLevel:(NSInteger)level{
+    switch (level) {
+        case 1:
+            return [UIImage imageNamed:@"2.png"];
+        case 2:
+            return [UIImage imageNamed:@"4.png"];
+        case 3:
+            return [UIImage imageNamed:@"8.png"];
+        case 4:
+            return [UIImage imageNamed:@"16.png"];
+        case 5:
+            return [UIImage imageNamed:@"32.png"];
+        case 6:
+            return [UIImage imageNamed:@"64.png"];
+        case 7:
+            return [UIImage imageNamed:@"128.png"];
+        case 8:
+            return [UIImage imageNamed:@"256.png"];
+        case 9:
+            return [UIImage imageNamed:@"512.png"];
+        case 10:
+            return [UIImage imageNamed:@"1024.png"];
+        case 11:
+            return [UIImage imageNamed:@"2048.png"];
+        case 12:
+            return [UIImage imageNamed:@"4096.png"];
+        case 13:
+            return [UIImage imageNamed:@"8192.png"];
+        case 14:
+            return [UIImage imageNamed:@"16384.png"];
+        case 15:
+            return [UIImage imageNamed:@"32768.png"];
+        default:
+            return [UIImage imageNamed:@"32768.png"];
+    }
+}
 
 + (UIColor *)textColorForLevel:(NSInteger)level
 {
@@ -168,6 +204,42 @@
   }
 }
 
++ (UIImage *)imageForLevel:(NSInteger)level{
+    switch (level) {
+        case 1:
+            return [UIImage imageNamed:@"2.png"];
+        case 2:
+            return [UIImage imageNamed:@"4.png"];
+        case 3:
+            return [UIImage imageNamed:@"8.png"];
+        case 4:
+            return [UIImage imageNamed:@"16.png"];
+        case 5:
+            return [UIImage imageNamed:@"32.png"];
+        case 6:
+            return [UIImage imageNamed:@"64.png"];
+        case 7:
+            return [UIImage imageNamed:@"128.png"];
+        case 8:
+            return [UIImage imageNamed:@"256.png"];
+        case 9:
+            return [UIImage imageNamed:@"512.png"];
+        case 10:
+            return [UIImage imageNamed:@"1024.png"];
+        case 11:
+            return [UIImage imageNamed:@"2048.png"];
+        case 12:
+            return [UIImage imageNamed:@"4096.png"];
+        case 13:
+            return [UIImage imageNamed:@"8192.png"];
+        case 14:
+            return [UIImage imageNamed:@"16384.png"];
+        case 15:
+            return [UIImage imageNamed:@"32768.png"];
+        default:
+            return [UIImage imageNamed:@"32768.png"];
+    }
+}
 
 + (UIColor *)backgroundColor
 {
@@ -287,6 +359,42 @@
   }
 }
 
++ (UIImage *)imageForLevel:(NSInteger)level{
+    switch (level) {
+        case 1:
+            return [UIImage imageNamed:@"2.png"];
+        case 2:
+            return [UIImage imageNamed:@"4.png"];
+        case 3:
+            return [UIImage imageNamed:@"8.png"];
+        case 4:
+            return [UIImage imageNamed:@"16.png"];
+        case 5:
+            return [UIImage imageNamed:@"32.png"];
+        case 6:
+            return [UIImage imageNamed:@"64.png"];
+        case 7:
+            return [UIImage imageNamed:@"128.png"];
+        case 8:
+            return [UIImage imageNamed:@"256.png"];
+        case 9:
+            return [UIImage imageNamed:@"512.png"];
+        case 10:
+            return [UIImage imageNamed:@"1024.png"];
+        case 11:
+            return [UIImage imageNamed:@"2048.png"];
+        case 12:
+            return [UIImage imageNamed:@"4096.png"];
+        case 13:
+            return [UIImage imageNamed:@"8192.png"];
+        case 14:
+            return [UIImage imageNamed:@"16384.png"];
+        case 15:
+            return [UIImage imageNamed:@"32768.png"];
+        default:
+            return [UIImage imageNamed:@"32768.png"];
+    }
+}
 
 + (UIColor *)backgroundColor
 {
