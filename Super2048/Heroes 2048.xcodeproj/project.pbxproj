@@ -246,11 +246,6 @@
 				CLASSPREFIX = M2;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Danqing;
-				TargetAttributes = {
-					2443DC5118D662CA00C920C1 = {
-						DevelopmentTeam = J8EBSP3JMS;
-					};
-				};
 			};
 			buildConfigurationList = 2443DC4D18D662CA00C920C1 /* Build configuration list for PBXProject "Heroes 2048" */;
 			compatibilityVersion = "Xcode 3.2";
