@@ -73,7 +73,7 @@ typedef void (^M2Block)();
       
       SKTexture *backgroundTexture = [SKTexture textureWithCGImage:[GSTATE imageForLevel:self.level].CGImage];
       _board = [SKSpriteNode spriteNodeWithTexture:backgroundTexture];
-      [_board setScale:0.16];
+      [_board setScale:0.32];
       _board.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
       [self addChild:_board];
       
