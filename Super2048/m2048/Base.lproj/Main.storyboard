@@ -221,7 +221,7 @@
             </objects>
             <point key="canvasLocation" x="964" y="367"/>
         </scene>
-        <!--About 2048-->
+        <!--About Heroes-->
         <scene sceneID="QMt-o9-L6P">
             <objects>
                 <viewController id="qYG-f3-Y88" sceneMemberID="viewController">
@@ -233,14 +233,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="2mP-lF-7EF">
-                                <rect key="frame" x="20" y="74" width="280" height="416"/>
-                                <string key="text">This game is largely based on the popular web-based game 2048, by Gabriele Cirulli. You can find the original game at http://git.io/2048. Please refer to its documentation to see its ancestors.
-
-Are you a developer? This game is an open source project. If you are interested in SpriteKit, the cool new addition to iOS 7, or in iOS development in general, check out its source code at http://github.com/ik/2048. Any contributions or forks are highly welcome, and I hope you find the source code useful in your own development work!
-
-Made with love (and without ads) by Danqing Liu. &lt;3
-Additional contributions by Scott Matthewman</string>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Phi Nguyen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="2mP-lF-7EF">
+                                <rect key="frame" x="109" y="74" width="102" height="19"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -252,7 +246,7 @@ Additional contributions by Scott Matthewman</string>
                             <constraint firstItem="2mP-lF-7EF" firstAttribute="top" secondItem="CMP-ng-qzu" secondAttribute="top" constant="74" id="hnm-ZP-3e4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About 2048" id="zF5-Z2-jjH"/>
+                    <navigationItem key="navigationItem" title="About Heroes" id="zF5-Z2-jjH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iys-C4-Yzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
