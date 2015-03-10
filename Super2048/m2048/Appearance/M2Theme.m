@@ -57,37 +57,37 @@
 + (UIImage *)imageForLevel:(NSInteger)level{
     switch (level) {
         case 1:
-            return [UIImage imageNamed:@"2.png"];
+            return [UIImage imageNamed:@"2_2.png"];
         case 2:
-            return [UIImage imageNamed:@"4.png"];
+            return [UIImage imageNamed:@"2_4.png"];
         case 3:
-            return [UIImage imageNamed:@"8.png"];
+            return [UIImage imageNamed:@"2_8.png"];
         case 4:
-            return [UIImage imageNamed:@"16.png"];
+            return [UIImage imageNamed:@"2_16.png"];
         case 5:
-            return [UIImage imageNamed:@"32.png"];
+            return [UIImage imageNamed:@"2_32.png"];
         case 6:
-            return [UIImage imageNamed:@"64.png"];
+            return [UIImage imageNamed:@"2_64.png"];
         case 7:
-            return [UIImage imageNamed:@"128.png"];
+            return [UIImage imageNamed:@"2_128.png"];
         case 8:
-            return [UIImage imageNamed:@"256.png"];
+            return [UIImage imageNamed:@"2_256.png"];
         case 9:
-            return [UIImage imageNamed:@"512.png"];
+            return [UIImage imageNamed:@"2_512.png"];
         case 10:
-            return [UIImage imageNamed:@"1024.png"];
+            return [UIImage imageNamed:@"2_1024.png"];
         case 11:
-            return [UIImage imageNamed:@"2048.png"];
+            return [UIImage imageNamed:@"2_2048.png"];
         case 12:
-            return [UIImage imageNamed:@"4096.png"];
+            return [UIImage imageNamed:@"2_4096.png"];
         case 13:
-            return [UIImage imageNamed:@"8192.png"];
+            return [UIImage imageNamed:@"2_8192.png"];
         case 14:
-            return [UIImage imageNamed:@"16384.png"];
+            return [UIImage imageNamed:@"2_16384.png"];
         case 15:
-            return [UIImage imageNamed:@"32768.png"];
+            return [UIImage imageNamed:@"2_32768.png"];
         default:
-            return [UIImage imageNamed:@"32768.png"];
+            return [UIImage imageNamed:@"2_32768.png"];
     }
 }
 
@@ -207,37 +207,37 @@
 + (UIImage *)imageForLevel:(NSInteger)level{
     switch (level) {
         case 1:
-            return [UIImage imageNamed:@"2.png"];
+            return [UIImage imageNamed:@"1_2.png"];
         case 2:
-            return [UIImage imageNamed:@"4.png"];
+            return [UIImage imageNamed:@"1_4.png"];
         case 3:
-            return [UIImage imageNamed:@"8.png"];
+            return [UIImage imageNamed:@"1_8.png"];
         case 4:
-            return [UIImage imageNamed:@"16.png"];
+            return [UIImage imageNamed:@"1_16.png"];
         case 5:
-            return [UIImage imageNamed:@"32.png"];
+            return [UIImage imageNamed:@"1_32.png"];
         case 6:
-            return [UIImage imageNamed:@"64.png"];
+            return [UIImage imageNamed:@"1_64.png"];
         case 7:
-            return [UIImage imageNamed:@"128.png"];
+            return [UIImage imageNamed:@"1_128.png"];
         case 8:
-            return [UIImage imageNamed:@"256.png"];
+            return [UIImage imageNamed:@"1_256.png"];
         case 9:
-            return [UIImage imageNamed:@"512.png"];
+            return [UIImage imageNamed:@"1_512.png"];
         case 10:
-            return [UIImage imageNamed:@"1024.png"];
+            return [UIImage imageNamed:@"1_1024.png"];
         case 11:
-            return [UIImage imageNamed:@"2048.png"];
+            return [UIImage imageNamed:@"1_2048.png"];
         case 12:
-            return [UIImage imageNamed:@"4096.png"];
+            return [UIImage imageNamed:@"1_4096.png"];
         case 13:
-            return [UIImage imageNamed:@"8192.png"];
+            return [UIImage imageNamed:@"1_8192.png"];
         case 14:
-            return [UIImage imageNamed:@"16384.png"];
+            return [UIImage imageNamed:@"1_16384.png"];
         case 15:
-            return [UIImage imageNamed:@"32768.png"];
+            return [UIImage imageNamed:@"1_32768.png"];
         default:
-            return [UIImage imageNamed:@"32768.png"];
+            return [UIImage imageNamed:@"1_32768.png"];
     }
 }
 
@@ -362,37 +362,37 @@
 + (UIImage *)imageForLevel:(NSInteger)level{
     switch (level) {
         case 1:
-            return [UIImage imageNamed:@"2.png"];
+            return [UIImage imageNamed:@"3_2.png"];
         case 2:
-            return [UIImage imageNamed:@"4.png"];
+            return [UIImage imageNamed:@"3_4.png"];
         case 3:
-            return [UIImage imageNamed:@"8.png"];
+            return [UIImage imageNamed:@"3_8.png"];
         case 4:
-            return [UIImage imageNamed:@"16.png"];
+            return [UIImage imageNamed:@"3_16.png"];
         case 5:
-            return [UIImage imageNamed:@"32.png"];
+            return [UIImage imageNamed:@"3_32.png"];
         case 6:
-            return [UIImage imageNamed:@"64.png"];
+            return [UIImage imageNamed:@"3_64.png"];
         case 7:
-            return [UIImage imageNamed:@"128.png"];
+            return [UIImage imageNamed:@"3_128.png"];
         case 8:
-            return [UIImage imageNamed:@"256.png"];
+            return [UIImage imageNamed:@"3_256.png"];
         case 9:
-            return [UIImage imageNamed:@"512.png"];
+            return [UIImage imageNamed:@"3_512.png"];
         case 10:
-            return [UIImage imageNamed:@"1024.png"];
+            return [UIImage imageNamed:@"3_1024.png"];
         case 11:
-            return [UIImage imageNamed:@"2048.png"];
+            return [UIImage imageNamed:@"3_2048.png"];
         case 12:
-            return [UIImage imageNamed:@"4096.png"];
+            return [UIImage imageNamed:@"3_4096.png"];
         case 13:
-            return [UIImage imageNamed:@"8192.png"];
+            return [UIImage imageNamed:@"3_8192.png"];
         case 14:
-            return [UIImage imageNamed:@"16384.png"];
+            return [UIImage imageNamed:@"3_16384.png"];
         case 15:
-            return [UIImage imageNamed:@"32768.png"];
+            return [UIImage imageNamed:@"3_32768.png"];
         default:
-            return [UIImage imageNamed:@"32768.png"];
+            return [UIImage imageNamed:@"3_32768.png"];
     }
 }
 
