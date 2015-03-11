@@ -18,8 +18,8 @@
 @implementation M2ViewController {
   IBOutlet UIButton *_restartButton;
   IBOutlet UIButton *_settingsButton;
-  IBOutlet UILabel *_targetScore;
   IBOutlet UILabel *_subtitle;
+    IBOutlet UIImageView *_targetHeroes;
   IBOutlet M2ScoreView *_scoreView;
   IBOutlet M2ScoreView *_bestView;
   
@@ -62,6 +62,9 @@
   _scene.controller = self;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 
 - (void)updateState
 {
@@ -74,23 +77,15 @@
   _settingsButton.backgroundColor = [GSTATE buttonColor];
   _settingsButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14];
   
-  _targetScore.textColor = [GSTATE buttonColor];
-  
-  long target = [GSTATE valueForLevel:GSTATE.winningLevel];
-  
-  if (target > 100000) {
-    _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:34];
-  } else if (target < 10000) {
-    _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:42];
-  } else {
-    _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:40];
-  }
-  
-  _targetScore.text = [NSString stringWithFormat:@"%ld", target];
-  
   _subtitle.textColor = [GSTATE buttonColor];
   _subtitle.font = [UIFont fontWithName:[GSTATE regularFontName] size:14];
-  _subtitle.text = [NSString stringWithFormat:@"Join the numbers to get to %ld!", target];
+  _subtitle.text = [NSString stringWithFormat:@"Join the heroes to get to:"];
+    
+    [_targetHeroes.layer setCornerRadius:30.0f];
+    [_targetHeroes.layer setMasksToBounds:YES];
+    [_targetHeroes.layer setBorderColor:[[GSTATE buttonColor] CGColor]];
+    [_targetHeroes.layer setBorderWidth:2.0f];
+   [_targetHeroes setImage:[GSTATE imageForLevel:GSTATE.winningLevel]];
   
   _overlay.message.font = [UIFont fontWithName:[GSTATE boldFontName] size:36];
   _overlay.keepPlaying.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17];
