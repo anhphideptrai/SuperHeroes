@@ -29,6 +29,7 @@
    * moves by the same swipe.
    */
   BOOL _hasPendingSwipe;
+  BOOL _disableSwipe;
 
   /** The current board node. */
   SKSpriteNode *_board;
@@ -80,16 +81,26 @@
 
 - (void)handleSwipe:(UIPanGestureRecognizer *)swipe {
   if (swipe.state == UIGestureRecognizerStateBegan) {
-    _hasPendingSwipe = YES;
+      if (!_disableSwipe) {
+          _hasPendingSwipe = YES;
+      }
   } else if (swipe.state == UIGestureRecognizerStateChanged) {
-    [self commitTranslation:[swipe translationInView:self.view]];
+      if (_hasPendingSwipe) {
+          [self commitTranslation:[swipe translationInView:self.view]];
+      }
+  } else if (swipe.state == UIGestureRecognizerStateEnded || swipe.state == UIGestureRecognizerStateCancelled){
+      if (!_disableSwipe) {
+          _disableSwipe = YES;
+          [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(delayEnableSwipe) userInfo:nil repeats:NO];
+      }
   }
 }
 
+- (void)delayEnableSwipe{
+    _disableSwipe = NO;
+}
 
 - (void)commitTranslation:(CGPoint)translation {
-  if (!_hasPendingSwipe) return;
-  
   CGFloat absX = fabs(translation.x);
   CGFloat absY = fabs(translation.y);
   
@@ -104,7 +115,6 @@
     translation.y < 0 ? [_manager moveToDirection:M2DirectionUp] :
                         [_manager moveToDirection:M2DirectionDown];
   }
-  
   _hasPendingSwipe = NO;
 }
 
