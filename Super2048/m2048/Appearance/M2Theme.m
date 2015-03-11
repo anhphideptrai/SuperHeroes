@@ -12,10 +12,10 @@
 #define HEX(c)       [UIColor colorWithRed:((c>>16)&0xFF)/255.0 green:((c>>8)&0xFF)/255.0 blue:(c&0xFF)/255.0 alpha:1.0]
 
 
-@interface M2DefaultTheme : NSObject <M2Theme>
+@interface M2StandardTheme : NSObject <M2Theme>
 @end
 
-@implementation M2DefaultTheme
+@implementation M2StandardTheme
 
 + (UIColor *)colorForLevel:(NSInteger)level
 {
@@ -440,11 +440,11 @@
 {
   switch (type) {
     case 1:
-      return [M2VibrantTheme class];
+      return [M2StandardTheme class];
     case 2:
       return [M2JoyfulTheme class];
     default:
-      return [M2DefaultTheme class];
+      return [M2VibrantTheme class];
   }
 }
 
