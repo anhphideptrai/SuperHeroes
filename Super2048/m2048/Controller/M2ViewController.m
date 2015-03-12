@@ -16,12 +16,13 @@
 #import "M2GridView.h"
 
 @implementation M2ViewController {
-  IBOutlet UIButton *_restartButton;
-  IBOutlet UIButton *_settingsButton;
-  IBOutlet UILabel *_subtitle;
+    IBOutlet UIButton *_restartButton;
+    IBOutlet UIButton *_settingsButton;
+    IBOutlet UILabel *_subtitle;
     IBOutlet UIImageView *_targetHeroes;
-  IBOutlet M2ScoreView *_scoreView;
-  IBOutlet M2ScoreView *_bestView;
+    IBOutlet UILabel *_targetScore;
+    IBOutlet M2ScoreView *_scoreView;
+    IBOutlet M2ScoreView *_bestView;
   
   M2Scene *_scene;
   
@@ -68,32 +69,47 @@
 
 - (void)updateState
 {
-  [_scoreView updateAppearance];
-  [_bestView updateAppearance];
+    [_scoreView updateAppearance];
+    [_bestView updateAppearance];
   
-  _restartButton.backgroundColor = [GSTATE buttonColor];
-  _restartButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14];
+    _restartButton.backgroundColor = [GSTATE buttonColor];
+    _restartButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14];
   
-  _settingsButton.backgroundColor = [GSTATE buttonColor];
-  _settingsButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14];
-  
-  _subtitle.textColor = [GSTATE buttonColor];
-  _subtitle.font = [UIFont fontWithName:[GSTATE regularFontName] size:14];
-  _subtitle.text = [NSString stringWithFormat:@"Join the heroes to get to:"];
+    _settingsButton.backgroundColor = [GSTATE buttonColor];
+    _settingsButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14];
+    
+    _subtitle.textColor = [GSTATE buttonColor];
+    _subtitle.font = [UIFont fontWithName:[GSTATE regularFontName] size:14];
+    _subtitle.text = [NSString stringWithFormat:[Settings boolForKey:@"Show Numbers"]?@"Join the numbers to get to:":@"Join the heroes to get to:"];
     
     [_targetHeroes.layer setCornerRadius:30.0f];
     [_targetHeroes.layer setMasksToBounds:YES];
     [_targetHeroes.layer setBorderColor:[[GSTATE buttonColor] CGColor]];
     [_targetHeroes.layer setBorderWidth:2.0f];
-   [_targetHeroes setImage:[GSTATE imageForLevel:GSTATE.winningLevel]];
+    [_targetHeroes setImage:[GSTATE imageForLevel:GSTATE.winningLevel]];
+    
+    long target = [GSTATE valueForLevel:GSTATE.winningLevel];
+    
+    if (target > 100000) {
+        _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:34];
+    } else if (target < 10000) {
+        _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:42];
+    } else {
+        _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:40];
+    }
+    _targetScore.textColor = [GSTATE buttonColor];
+    _targetScore.text = [NSString stringWithFormat:@"%ld", target];
+    
+    [_targetHeroes setHidden:[Settings boolForKey:@"Show Numbers"]];
+    [_targetScore setHidden:![Settings boolForKey:@"Show Numbers"]];
   
-  _overlay.message.font = [UIFont fontWithName:[GSTATE boldFontName] size:36];
-  _overlay.keepPlaying.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17];
-  _overlay.restartGame.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17];
+    _overlay.message.font = [UIFont fontWithName:[GSTATE boldFontName] size:36];
+    _overlay.keepPlaying.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17];
+    _overlay.restartGame.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17];
   
-  _overlay.message.textColor = [GSTATE buttonColor];
-  [_overlay.keepPlaying setTitleColor:[GSTATE buttonColor] forState:UIControlStateNormal];
-  [_overlay.restartGame setTitleColor:[GSTATE buttonColor] forState:UIControlStateNormal];
+    _overlay.message.textColor = [GSTATE buttonColor];
+    [_overlay.keepPlaying setTitleColor:[GSTATE buttonColor] forState:UIControlStateNormal];
+    [_overlay.restartGame setTitleColor:[GSTATE buttonColor] forState:UIControlStateNormal];
 }
 
 

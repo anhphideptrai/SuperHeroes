@@ -69,6 +69,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2048" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pf-W8-j3S">
+                                <rect key="frame" x="10" y="60" width="131" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uOw-Tk-bg7">
                                 <rect key="frame" x="30" y="60" width="60" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -148,6 +153,7 @@
                         <outlet property="_settingsButton" destination="8r1-lH-tEE" id="UN6-bn-dHf"/>
                         <outlet property="_subtitle" destination="r98-Zq-3Of" id="s6F-Zh-xnD"/>
                         <outlet property="_targetHeroes" destination="uOw-Tk-bg7" id="v1X-HC-8sb"/>
+                        <outlet property="_targetScore" destination="0pf-W8-j3S" id="11a-9c-3Ar"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
@@ -224,7 +230,6 @@
         <!--About Heroes-->
         <scene sceneID="QMt-o9-L6P">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Iys-C4-Yzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qYG-f3-Y88" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x9J-w9-iBO"/>
@@ -251,6 +256,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iys-C4-Yzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1449" y="548"/>
         </scene>

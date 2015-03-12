@@ -171,14 +171,16 @@ typedef void (^M2Block)();
 
 
 - (void)refreshValue {
-  long value = [GSTATE valueForLevel:self.level];
-  _value.text = [NSString stringWithFormat:@"%ld", value];
-  _value.fontColor = [GSTATE textColorForLevel:self.level];
-  _value.fontSize = [GSTATE textSizeForValue:value];
-    [_value setHidden:YES];
-  self.fillColor = [GSTATE colorForLevel:self.level];
-  SKTexture *backgroundTexture = [SKTexture textureWithCGImage:[GSTATE imageForLevel:self.level].CGImage];
-  [_board setTexture:backgroundTexture];
+    long value = [GSTATE valueForLevel:self.level];
+    _value.text = [NSString stringWithFormat:@"%ld", value];
+    _value.fontColor = [GSTATE textColorForLevel:self.level];
+    _value.fontSize = [GSTATE textSizeForValue:value];
+    self.fillColor = [GSTATE colorForLevel:self.level];
+    SKTexture *backgroundTexture = [SKTexture textureWithCGImage:[GSTATE imageForLevel:self.level].CGImage];
+    [_board setTexture:backgroundTexture];
+    
+    [_board setHidden:[Settings boolForKey:@"Show Numbers"]];
+    [_value setHidden:![Settings boolForKey:@"Show Numbers"]];
 }
 
 

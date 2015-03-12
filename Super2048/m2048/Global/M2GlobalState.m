@@ -13,6 +13,7 @@
 #define kTheme     @"Theme"
 #define kBoardSize @"Board Size"
 #define kBestScore @"Best Score"
+#define kShowNumbers @"Show Numbers"
 
 @interface M2GlobalState ()
 
@@ -53,7 +54,7 @@
 }
 
 - (void)setupDefaultState {
-  NSDictionary *defaultValues = @{kGameType: @0, kTheme: @0, kBoardSize: @1, kBestScore: @0};
+    NSDictionary *defaultValues = @{kGameType: @0, kTheme: @0, kBoardSize: @1, kBestScore: @0, kShowNumbers: @0};
   [Settings registerDefaults:defaultValues];
 }
 
