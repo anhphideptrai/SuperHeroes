@@ -135,6 +135,10 @@
                                     <outlet property="restartGame" destination="qXD-8y-R8y" id="K7b-ex-bao"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1s-Tf-rmb" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="120" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -154,6 +158,7 @@
                         <outlet property="_subtitle" destination="r98-Zq-3Of" id="s6F-Zh-xnD"/>
                         <outlet property="_targetHeroes" destination="uOw-Tk-bg7" id="v1X-HC-8sb"/>
                         <outlet property="_targetScore" destination="0pf-W8-j3S" id="11a-9c-3Ar"/>
+                        <outlet property="bannerView" destination="Y1s-Tf-rmb" id="Vu1-Xz-kpv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>

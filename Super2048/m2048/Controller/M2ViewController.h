@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 @interface M2ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
 
 - (void)updateScore:(NSInteger)score;
 

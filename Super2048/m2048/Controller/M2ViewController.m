@@ -15,6 +15,9 @@
 #import "M2Overlay.h"
 #import "M2GridView.h"
 
+#define BANNER_ID_ADMOB_HOME_PAGE @"ca-app-pub-1775449000819183/4506289954"
+#define INTERSTITIAL_ID_ADMOB_HOME_PAGE @"ca-app-pub-1775449000819183/7459756357"
+
 @implementation M2ViewController {
     IBOutlet UIButton *_restartButton;
     IBOutlet UIButton *_settingsButton;
@@ -61,6 +64,15 @@
   
   _scene = scene;
   _scene.controller = self;
+    
+    // Add Admob
+    self.bannerView.adUnitID = BANNER_ID_ADMOB_HOME_PAGE;
+    self.bannerView.rootViewController = self;
+    GADRequest *request = [GADRequest request];
+    request.testDevices = [NSArray arrayWithObjects:
+                           @"0a690b22a224e9cee6cb46572b7ee215",
+                           nil];
+    [self.bannerView loadRequest:request];
 }
 
 - (BOOL)prefersStatusBarHidden {
