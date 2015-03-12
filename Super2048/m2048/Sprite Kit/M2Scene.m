@@ -85,13 +85,11 @@
           _hasPendingSwipe = YES;
       }
   } else if (swipe.state == UIGestureRecognizerStateChanged) {
-      if (_hasPendingSwipe) {
-          [self commitTranslation:[swipe translationInView:self.view]];
-      }
+      [self commitTranslation:[swipe translationInView:self.view]];
   } else if (swipe.state == UIGestureRecognizerStateEnded || swipe.state == UIGestureRecognizerStateCancelled){
       if (!_disableSwipe) {
           _disableSwipe = YES;
-          [NSTimer scheduledTimerWithTimeInterval:0.3f target:self selector:@selector(delayEnableSwipe) userInfo:nil repeats:NO];
+          [NSTimer scheduledTimerWithTimeInterval:0.2f target:self selector:@selector(delayEnableSwipe) userInfo:nil repeats:NO];
       }
   }
 }
@@ -101,6 +99,7 @@
 }
 
 - (void)commitTranslation:(CGPoint)translation {
+  if (!_hasPendingSwipe) return;
   CGFloat absX = fabs(translation.x);
   CGFloat absY = fabs(translation.y);
   
