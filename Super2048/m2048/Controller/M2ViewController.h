@@ -10,8 +10,9 @@
 #import <SpriteKit/SpriteKit.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
 
-@interface M2ViewController : UIViewController
+@interface M2ViewController : UIViewController <GADInterstitialDelegate>
 @property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
+@property(nonatomic, strong) GADInterstitial *interstitial;
 
 - (void)updateScore:(NSInteger)score;
 

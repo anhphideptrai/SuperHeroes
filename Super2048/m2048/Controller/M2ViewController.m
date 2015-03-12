@@ -69,10 +69,11 @@
     self.bannerView.adUnitID = BANNER_ID_ADMOB_HOME_PAGE;
     self.bannerView.rootViewController = self;
     GADRequest *request = [GADRequest request];
-    request.testDevices = [NSArray arrayWithObjects:
+    request.testDevices = [NSArray arrayWithObjects:@"GAD_SIMULATOR_ID",
                            @"0a690b22a224e9cee6cb46572b7ee215",
                            nil];
     [self.bannerView loadRequest:request];
+    
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -170,6 +171,10 @@
 
 - (void)endGame:(BOOL)won
 {
+    NSUInteger r = arc4random_uniform(3) + 1;
+    if (r == 3) {
+        self.interstitial = [self createAndLoadInterstitial];
+    }
   _overlay.hidden = NO;
   _overlay.alpha = 0;
   _overlayBackground.hidden = NO;
@@ -220,6 +225,23 @@
 {
   [super didReceiveMemoryWarning];
   // Release any cached data, images, etc that aren't in use.
+}
+
+- (GADInterstitial *)createAndLoadInterstitial {
+    GADInterstitial *interstitial = [[GADInterstitial alloc] init];
+    interstitial.adUnitID = INTERSTITIAL_ID_ADMOB_HOME_PAGE;
+    interstitial.delegate = self;
+    GADRequest *request = [GADRequest request];
+    // Requests test ads on simulators.
+    request.testDevices = [NSArray arrayWithObjects:@"GAD_SIMULATOR_ID",
+                           @"0a690b22a224e9cee6cb46572b7ee215",
+                           nil];
+    [interstitial loadRequest:request];
+    return interstitial;
+}
+
+- (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial {
+    [self.interstitial presentFromRootViewController:self];
 }
 
 @end
