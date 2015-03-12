@@ -29,6 +29,11 @@
 		24C4517018DFF10B0001FCFD /* M2ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4516F18DFF10B0001FCFD /* M2ScoreView.m */; };
 		24C4517318E140AE0001FCFD /* M2SettingsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4517218E140AE0001FCFD /* M2SettingsDetailViewController.m */; };
 		24C4518118E265390001FCFD /* M2Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4518018E265390001FCFD /* M2Overlay.m */; };
+		B2CF14581AB1C50100E7F5CB /* M2MoreAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CF14571AB1C50100E7F5CB /* M2MoreAppsViewController.m */; };
+		B2CF145D1AB1CB0100E7F5CB /* ic_draw.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CF145A1AB1CB0100E7F5CB /* ic_draw.png */; };
+		B2CF145E1AB1CB0100E7F5CB /* ic_origami.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CF145B1AB1CB0100E7F5CB /* ic_origami.png */; };
+		B2CF145F1AB1CB0100E7F5CB /* ic_pokemon.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CF145C1AB1CB0100E7F5CB /* ic_pokemon.png */; };
+		B2CF14611AB1CE8800E7F5CB /* ic_knots.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CF14601AB1CE8800E7F5CB /* ic_knots.png */; };
 		B2F5D1921AAF3E450010D08E /* 1_8.png in Resources */ = {isa = PBXBuildFile; fileRef = B2F5D1651AAF3E450010D08E /* 1_8.png */; };
 		B2F5D1931AAF3E450010D08E /* 1_2.png in Resources */ = {isa = PBXBuildFile; fileRef = B2F5D1661AAF3E450010D08E /* 1_2.png */; };
 		B2F5D1941AAF3E450010D08E /* 1_16384.png in Resources */ = {isa = PBXBuildFile; fileRef = B2F5D1671AAF3E450010D08E /* 1_16384.png */; };
@@ -118,6 +123,12 @@
 		24C4517218E140AE0001FCFD /* M2SettingsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2SettingsDetailViewController.m; sourceTree = "<group>"; };
 		24C4517F18E265390001FCFD /* M2Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2Overlay.h; sourceTree = "<group>"; };
 		24C4518018E265390001FCFD /* M2Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2Overlay.m; sourceTree = "<group>"; };
+		B2CF14561AB1C50100E7F5CB /* M2MoreAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MoreAppsViewController.h; sourceTree = "<group>"; };
+		B2CF14571AB1C50100E7F5CB /* M2MoreAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MoreAppsViewController.m; sourceTree = "<group>"; };
+		B2CF145A1AB1CB0100E7F5CB /* ic_draw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_draw.png; sourceTree = "<group>"; };
+		B2CF145B1AB1CB0100E7F5CB /* ic_origami.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_origami.png; sourceTree = "<group>"; };
+		B2CF145C1AB1CB0100E7F5CB /* ic_pokemon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_pokemon.png; sourceTree = "<group>"; };
+		B2CF14601AB1CE8800E7F5CB /* ic_knots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_knots.png; sourceTree = "<group>"; };
 		B2F5D1651AAF3E450010D08E /* 1_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1_8.png; path = Images/1_8.png; sourceTree = "<group>"; };
 		B2F5D1661AAF3E450010D08E /* 1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1_2.png; path = Images/1_2.png; sourceTree = "<group>"; };
 		B2F5D1671AAF3E450010D08E /* 1_16384.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1_16384.png; path = Images/1_16384.png; sourceTree = "<group>"; };
@@ -281,6 +292,8 @@
 				2443DC9F18D6647000C920C1 /* M2SettingsViewController.m */,
 				24C4517118E140AE0001FCFD /* M2SettingsDetailViewController.h */,
 				24C4517218E140AE0001FCFD /* M2SettingsDetailViewController.m */,
+				B2CF14561AB1C50100E7F5CB /* M2MoreAppsViewController.h */,
+				B2CF14571AB1C50100E7F5CB /* M2MoreAppsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -311,6 +324,7 @@
 		B204B1BB1AAE370500B98407 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B2CF14591AB1CB0100E7F5CB /* MoreApps */,
 				B2F5D1B01AAF45FB0010D08E /* 2_32768.png */,
 				B2F5D1B11AAF45FB0010D08E /* 2_16384.png */,
 				B2F5D1B21AAF45FB0010D08E /* 2_8192.png */,
@@ -358,6 +372,18 @@
 				B2F5D1821AAF3E450010D08E /* 3_32.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		B2CF14591AB1CB0100E7F5CB /* MoreApps */ = {
+			isa = PBXGroup;
+			children = (
+				B2CF14601AB1CE8800E7F5CB /* ic_knots.png */,
+				B2CF145A1AB1CB0100E7F5CB /* ic_draw.png */,
+				B2CF145B1AB1CB0100E7F5CB /* ic_origami.png */,
+				B2CF145C1AB1CB0100E7F5CB /* ic_pokemon.png */,
+			);
+			name = MoreApps;
+			path = Images/MoreApps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +443,7 @@
 				B2F5D1C01AAF45FB0010D08E /* 2_16384.png in Resources */,
 				B2F5D19A1AAF3E450010D08E /* 1_64.png in Resources */,
 				B2F5D1931AAF3E450010D08E /* 1_2.png in Resources */,
+				B2CF145E1AB1CB0100E7F5CB /* ic_origami.png in Resources */,
 				B2F5D1A21AAF3E450010D08E /* 3_128.png in Resources */,
 				B2F5D1CC1AAF45FB0010D08E /* 2_4.png in Resources */,
 				B2F5D1AE1AAF3E450010D08E /* 3_2048.png in Resources */,
@@ -437,8 +464,10 @@
 				B2F5D19F1AAF3E450010D08E /* 1_1024.png in Resources */,
 				B2F5D1AC1AAF3E450010D08E /* 3_64.png in Resources */,
 				B2F5D19C1AAF3E450010D08E /* 1_256.png in Resources */,
+				B2CF14611AB1CE8800E7F5CB /* ic_knots.png in Resources */,
 				B2F5D1A11AAF3E450010D08E /* 3_8.png in Resources */,
 				B2F5D1A61AAF3E450010D08E /* 3_4.png in Resources */,
+				B2CF145F1AB1CB0100E7F5CB /* ic_pokemon.png in Resources */,
 				B2F5D1CB1AAF45FB0010D08E /* 2_8.png in Resources */,
 				B2F5D1A01AAF3E450010D08E /* 1_32768.png in Resources */,
 				2443DC7518D662CA00C920C1 /* Images.xcassets in Resources */,
@@ -447,6 +476,7 @@
 				2443DC6B18D662CA00C920C1 /* Main.storyboard in Resources */,
 				B2F5D1A51AAF3E450010D08E /* 3_1024.png in Resources */,
 				B2F5D19B1AAF3E450010D08E /* 1_512.png in Resources */,
+				B2CF145D1AB1CB0100E7F5CB /* ic_draw.png in Resources */,
 				B2F5D1A91AAF3E450010D08E /* 3_256.png in Resources */,
 				B2F5D1C31AAF45FB0010D08E /* 2_16.png in Resources */,
 				B2F5D1C21AAF45FB0010D08E /* 2_4096.png in Resources */,
@@ -481,6 +511,7 @@
 				2443DCAF18D6C18400C920C1 /* M2Tile.m in Sources */,
 				2443DCA018D6647000C920C1 /* M2SettingsViewController.m in Sources */,
 				24C4517018DFF10B0001FCFD /* M2ScoreView.m in Sources */,
+				B2CF14581AB1C50100E7F5CB /* M2MoreAppsViewController.m in Sources */,
 				2443DCA318D6649500C920C1 /* M2Theme.m in Sources */,
 				24C4517318E140AE0001FCFD /* M2SettingsDetailViewController.m in Sources */,
 				24C4516418DABABE0001FCFD /* M2GlobalState.m in Sources */,

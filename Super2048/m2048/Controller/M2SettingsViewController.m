@@ -114,7 +114,7 @@
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Settings Cell"];
   
   if (indexPath.section) {
-    cell.textLabel.text = @"About Heroes";
+    cell.textLabel.text = @"More Apps";
     cell.detailTextLabel.text = @"";
   } else {
     cell.textLabel.text = [_options objectAtIndex:indexPath.row];
