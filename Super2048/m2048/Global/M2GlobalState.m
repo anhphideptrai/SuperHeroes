@@ -83,7 +83,7 @@
 
 
 - (NSInteger)verticalOffset {
-  CGFloat height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + 120;
+    CGFloat height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + ([[UIScreen mainScreen] bounds].size.height > 480.f?120:155);
   return ([[UIScreen mainScreen] bounds].size.height - height) / 2;
 }
 
