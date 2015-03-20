@@ -15,7 +15,7 @@
 		2443DC6218D662CA00C920C1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2443DC6018D662CA00C920C1 /* InfoPlist.strings */; };
 		2443DC6418D662CA00C920C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2443DC6318D662CA00C920C1 /* main.m */; };
 		2443DC6818D662CA00C920C1 /* M2AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2443DC6718D662CA00C920C1 /* M2AppDelegate.m */; };
-		2443DC6B18D662CA00C920C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2443DC6918D662CA00C920C1 /* Main.storyboard */; };
+		2443DC6B18D662CA00C920C1 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2443DC6918D662CA00C920C1 /* Main_iPhone.storyboard */; };
 		2443DC7518D662CA00C920C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2443DC7418D662CA00C920C1 /* Images.xcassets */; };
 		2443DC9A18D663FC00C920C1 /* M2Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2443DC9618D663FC00C920C1 /* M2Scene.m */; };
 		2443DC9B18D663FC00C920C1 /* M2GameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2443DC9918D663FC00C920C1 /* M2GameManager.m */; };
@@ -30,6 +30,7 @@
 		24C4517018DFF10B0001FCFD /* M2ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4516F18DFF10B0001FCFD /* M2ScoreView.m */; };
 		24C4517318E140AE0001FCFD /* M2SettingsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4517218E140AE0001FCFD /* M2SettingsDetailViewController.m */; };
 		24C4518118E265390001FCFD /* M2Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4518018E265390001FCFD /* M2Overlay.m */; };
+		B23448B91ABCC23B00A8ECB8 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23448B71ABCC23B00A8ECB8 /* Main_iPad.storyboard */; };
 		B2CF14581AB1C50100E7F5CB /* M2MoreAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CF14571AB1C50100E7F5CB /* M2MoreAppsViewController.m */; };
 		B2CF145D1AB1CB0100E7F5CB /* ic_draw.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CF145A1AB1CB0100E7F5CB /* ic_draw.png */; };
 		B2CF145E1AB1CB0100E7F5CB /* ic_origami.png in Resources */ = {isa = PBXBuildFile; fileRef = B2CF145B1AB1CB0100E7F5CB /* ic_origami.png */; };
@@ -94,7 +95,7 @@
 		2443DC6518D662CA00C920C1 /* Heroes 2048-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Heroes 2048-Prefix.pch"; sourceTree = "<group>"; };
 		2443DC6618D662CA00C920C1 /* M2AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = M2AppDelegate.h; sourceTree = "<group>"; };
 		2443DC6718D662CA00C920C1 /* M2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M2AppDelegate.m; sourceTree = "<group>"; };
-		2443DC6A18D662CA00C920C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2443DC6A18D662CA00C920C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		2443DC7418D662CA00C920C1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2443DC7B18D662CA00C920C1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2443DC9518D663FC00C920C1 /* M2Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2Scene.h; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		89D4878145810A5051E550CF /* Pods-Heroes 2048.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heroes 2048.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Heroes 2048/Pods-Heroes 2048.debug.xcconfig"; sourceTree = "<group>"; };
 		9198E1EDD32611AC0FC4AF8A /* Pods-Heroes 2048.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heroes 2048.release.xcconfig"; path = "Pods/Target Support Files/Pods-Heroes 2048/Pods-Heroes 2048.release.xcconfig"; sourceTree = "<group>"; };
 		B223C11F1AB1EFB6005BB7A9 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		B23448B81ABCC23B00A8ECB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		B2CF14561AB1C50100E7F5CB /* M2MoreAppsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2MoreAppsViewController.h; sourceTree = "<group>"; };
 		B2CF14571AB1C50100E7F5CB /* M2MoreAppsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2MoreAppsViewController.m; sourceTree = "<group>"; };
 		B2CF145A1AB1CB0100E7F5CB /* ic_draw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_draw.png; sourceTree = "<group>"; };
@@ -235,7 +237,8 @@
 				B204B1BB1AAE370500B98407 /* Images */,
 				2443DC6618D662CA00C920C1 /* M2AppDelegate.h */,
 				2443DC6718D662CA00C920C1 /* M2AppDelegate.m */,
-				2443DC6918D662CA00C920C1 /* Main.storyboard */,
+				B23448B71ABCC23B00A8ECB8 /* Main_iPad.storyboard */,
+				2443DC6918D662CA00C920C1 /* Main_iPhone.storyboard */,
 				2443DC9C18D6645800C920C1 /* Appearance */,
 				2443DC9D18D6645800C920C1 /* Controller */,
 				24C4516018DABABE0001FCFD /* Global */,
@@ -489,11 +492,12 @@
 				B2F5D1A61AAF3E450010D08E /* 3_4.png in Resources */,
 				B2CF145F1AB1CB0100E7F5CB /* ic_pokemon.png in Resources */,
 				B2F5D1CB1AAF45FB0010D08E /* 2_8.png in Resources */,
+				B23448B91ABCC23B00A8ECB8 /* Main_iPad.storyboard in Resources */,
 				B2F5D1A01AAF3E450010D08E /* 1_32768.png in Resources */,
 				2443DC7518D662CA00C920C1 /* Images.xcassets in Resources */,
 				B2F5D1CA1AAF45FB0010D08E /* 2_32.png in Resources */,
 				B2F5D1BF1AAF45FB0010D08E /* 2_32768.png in Resources */,
-				2443DC6B18D662CA00C920C1 /* Main.storyboard in Resources */,
+				2443DC6B18D662CA00C920C1 /* Main_iPhone.storyboard in Resources */,
 				B2F5D1A51AAF3E450010D08E /* 3_1024.png in Resources */,
 				B2F5D19B1AAF3E450010D08E /* 1_512.png in Resources */,
 				B2CF145D1AB1CB0100E7F5CB /* ic_draw.png in Resources */,
@@ -584,12 +588,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		2443DC6918D662CA00C920C1 /* Main.storyboard */ = {
+		2443DC6918D662CA00C920C1 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2443DC6A18D662CA00C920C1 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		B23448B71ABCC23B00A8ECB8 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B23448B81ABCC23B00A8ECB8 /* Base */,
+			);
+			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -681,7 +693,7 @@
 				INFOPLIST_FILE = "m2048/Heroes 2048-Info.plist";
 				PRODUCT_NAME = "Heroes 2048";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -702,7 +714,7 @@
 				INFOPLIST_FILE = "m2048/Heroes 2048-Info.plist";
 				PRODUCT_NAME = "Heroes 2048";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -7,6 +7,7 @@
 //
 
 #import "M2ScoreView.h"
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
 @implementation M2ScoreView
 
@@ -39,8 +40,8 @@
 - (void)updateAppearance
 {
   self.backgroundColor = [GSTATE scoreBoardColor];
-  self.title.font = [UIFont fontWithName:[GSTATE boldFontName] size:12];
-  self.score.font = [UIFont fontWithName:[GSTATE regularFontName] size:16];
+    self.title.font = [UIFont fontWithName:[GSTATE boldFontName] size:IS_IPAD?20:12];
+  self.score.font = [UIFont fontWithName:[GSTATE regularFontName] size:IS_IPAD?23:16];
 }
 
 /*

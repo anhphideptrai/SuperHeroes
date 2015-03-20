@@ -14,7 +14,7 @@
 #define kBoardSize @"Board Size"
 #define kBestScore @"Best Score"
 #define kShowNumbers @"Show Numbers"
-
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 @interface M2GlobalState ()
 
 @property (nonatomic, readwrite) NSInteger dimension;
@@ -72,7 +72,7 @@
 
 
 - (NSInteger)tileSize {
-  return self.dimension <= 4 ? 66 : 56;
+    return self.dimension <= 4 ? IS_IPAD?158.4:66 : IS_IPAD?134.4:56;
 }
 
 
@@ -83,7 +83,7 @@
 
 
 - (NSInteger)verticalOffset {
-    CGFloat height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + ([[UIScreen mainScreen] bounds].size.height > 480.f?120:155);
+    CGFloat height = self.dimension * (self.tileSize + self.borderWidth) + self.borderWidth + (IS_IPAD?210:([[UIScreen mainScreen] bounds].size.height > 480.f?120:155));
   return ([[UIScreen mainScreen] bounds].size.height - height) / 2;
 }
 
@@ -159,17 +159,17 @@
 - (CGFloat)textSizeForValue:(NSInteger)value {
   NSInteger offset = self.dimension == 5 ? 2 : 0;
   if (value < 100) {
-    return 32 - offset;
+      return IS_IPAD?32*2.4:32 - offset;
   } else if (value < 1000) {
-    return 28 - offset;
+    return IS_IPAD?32*2.4:28 - offset;
   } else if (value < 10000) {
-    return 24 - offset;
+    return IS_IPAD?32*2.4:24 - offset;
   } else if (value < 100000) {
-    return 20 - offset;
+    return IS_IPAD?32*2.4:20 - offset;
   } else if (value < 1000000) {
-    return 16 - offset;
+    return IS_IPAD?32*2.4:16 - offset;
   } else {
-    return 13 - offset;
+    return IS_IPAD?32*2.4:13 - offset;
   }
 }
 

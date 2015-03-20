@@ -17,7 +17,7 @@
 
 #define BANNER_ID_ADMOB_HOME_PAGE @"ca-app-pub-1775449000819183/4506289954"
 #define INTERSTITIAL_ID_ADMOB_HOME_PAGE @"ca-app-pub-1775449000819183/7459756357"
-
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 @implementation M2ViewController {
     IBOutlet UIButton *_restartButton;
     IBOutlet UIButton *_settingsButton;
@@ -70,7 +70,7 @@
     self.bannerView.rootViewController = self;
     GADRequest *request = [GADRequest request];
     request.testDevices = [NSArray arrayWithObjects:@"GAD_SIMULATOR_ID",
-                           @"0a690b22a224e9cee6cb46572b7ee215",
+                           @"0a690b22a224e9cee6cb46572b7ee215", @"f2b1a55b050ac3483e1c17a21a2073f5",
                            nil];
     [self.bannerView loadRequest:request];
     
@@ -86,16 +86,16 @@
     [_bestView updateAppearance];
   
     _restartButton.backgroundColor = [GSTATE buttonColor];
-    _restartButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14];
+    _restartButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:IS_IPAD?22:14];
   
     _settingsButton.backgroundColor = [GSTATE buttonColor];
-    _settingsButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:14];
+    _settingsButton.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:IS_IPAD?22:14];
     
     _subtitle.textColor = [GSTATE buttonColor];
-    _subtitle.font = [UIFont fontWithName:[GSTATE regularFontName] size:14];
+    _subtitle.font = [UIFont fontWithName:[GSTATE regularFontName] size:IS_IPAD?22:14];
     _subtitle.text = [NSString stringWithFormat:[Settings boolForKey:@"Show Numbers"]?@"Join the numbers to get to:":@"Join the heroes to get to:"];
     
-    [_targetHeroes.layer setCornerRadius:30.0f];
+    [_targetHeroes.layer setCornerRadius:IS_IPAD?40.f:30.0f];
     [_targetHeroes.layer setMasksToBounds:YES];
     [_targetHeroes.layer setBorderColor:[[GSTATE buttonColor] CGColor]];
     [_targetHeroes.layer setBorderWidth:2.0f];
@@ -104,11 +104,11 @@
     long target = [GSTATE valueForLevel:GSTATE.winningLevel];
     
     if (target > 100000) {
-        _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:34];
+        _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:IS_IPAD?44:34];
     } else if (target < 10000) {
-        _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:42];
+        _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:IS_IPAD?52:42];
     } else {
-        _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:40];
+        _targetScore.font = [UIFont fontWithName:[GSTATE boldFontName] size:IS_IPAD?50:40];
     }
     _targetScore.textColor = [GSTATE buttonColor];
     _targetScore.text = [NSString stringWithFormat:@"%ld", target];
@@ -116,9 +116,9 @@
     [_targetHeroes setHidden:[Settings boolForKey:@"Show Numbers"]];
     [_targetScore setHidden:![Settings boolForKey:@"Show Numbers"]];
   
-    _overlay.message.font = [UIFont fontWithName:[GSTATE boldFontName] size:36];
-    _overlay.keepPlaying.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17];
-    _overlay.restartGame.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:17];
+    _overlay.message.font = [UIFont fontWithName:[GSTATE boldFontName] size:IS_IPAD?46:36];
+    _overlay.keepPlaying.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:IS_IPAD?24:17];
+    _overlay.restartGame.titleLabel.font = [UIFont fontWithName:[GSTATE boldFontName] size:IS_IPAD?24:17];
   
     _overlay.message.textColor = [GSTATE buttonColor];
     [_overlay.keepPlaying setTitleColor:[GSTATE buttonColor] forState:UIControlStateNormal];
@@ -234,7 +234,7 @@
     GADRequest *request = [GADRequest request];
     // Requests test ads on simulators.
     request.testDevices = [NSArray arrayWithObjects:@"GAD_SIMULATOR_ID",
-                           @"0a690b22a224e9cee6cb46572b7ee215",
+                           @"0a690b22a224e9cee6cb46572b7ee215", @"f2b1a55b050ac3483e1c17a21a2073f5",
                            nil];
     [interstitial loadRequest:request];
     return interstitial;
