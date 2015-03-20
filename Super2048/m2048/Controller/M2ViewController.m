@@ -70,7 +70,7 @@
     self.bannerView.rootViewController = self;
     GADRequest *request = [GADRequest request];
     request.testDevices = [NSArray arrayWithObjects:@"GAD_SIMULATOR_ID",
-                           @"0a690b22a224e9cee6cb46572b7ee215", @"f2b1a55b050ac3483e1c17a21a2073f5",
+                           @"1485d1faa4c1010a54b384ca9e9944b7", @"f2b1a55b050ac3483e1c17a21a2073f5",
                            nil];
     [self.bannerView loadRequest:request];
     
@@ -234,7 +234,7 @@
     GADRequest *request = [GADRequest request];
     // Requests test ads on simulators.
     request.testDevices = [NSArray arrayWithObjects:@"GAD_SIMULATOR_ID",
-                           @"0a690b22a224e9cee6cb46572b7ee215", @"f2b1a55b050ac3483e1c17a21a2073f5",
+                           @"1485d1faa4c1010a54b384ca9e9944b7", @"f2b1a55b050ac3483e1c17a21a2073f5",
                            nil];
     [interstitial loadRequest:request];
     return interstitial;

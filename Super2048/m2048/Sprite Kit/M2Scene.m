@@ -11,7 +11,7 @@
 #import "M2GridView.h"
 
 // The min distance in one direction for an effective swipe.
-#define EFFECTIVE_SWIPE_DISTANCE_THRESHOLD 20.0f
+#define EFFECTIVE_SWIPE_DISTANCE_THRESHOLD 15.0f
 
 // The max ratio between the translation in x and y directions
 // to make a swipe valid. i.e. diagonal swipes are invalid.
