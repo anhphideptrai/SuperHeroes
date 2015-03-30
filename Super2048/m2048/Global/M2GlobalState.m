@@ -161,15 +161,15 @@
   if (value < 100) {
       return IS_IPAD?32*2.4:32 - offset;
   } else if (value < 1000) {
-    return IS_IPAD?32*2.4:28 - offset;
+    return IS_IPAD?28*2.4:28 - offset;
   } else if (value < 10000) {
-    return IS_IPAD?32*2.4:24 - offset;
+    return IS_IPAD?24*2.4:24 - offset;
   } else if (value < 100000) {
-    return IS_IPAD?32*2.4:20 - offset;
+    return IS_IPAD?20*2.4:20 - offset;
   } else if (value < 1000000) {
-    return IS_IPAD?32*2.4:16 - offset;
+    return IS_IPAD?16*2.4:16 - offset;
   } else {
-    return IS_IPAD?32*2.4:13 - offset;
+    return IS_IPAD?13*2.4:13 - offset;
   }
 }
 
