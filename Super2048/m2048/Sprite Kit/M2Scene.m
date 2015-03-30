@@ -17,6 +17,7 @@
 // to make a swipe valid. i.e. diagonal swipes are invalid.
 #define VALID_SWIPE_DIRECTION_THRESHOLD 2.0f
 
+#define IS_RETINA ([[UIScreen mainScreen] scale] == 2.0)
 
 @implementation M2Scene {
   /** The game manager that controls all the logic of the game. */
@@ -49,7 +50,7 @@
   UIImage *image = [M2GridView gridImageWithGrid:grid];
   SKTexture *backgroundTexture = [SKTexture textureWithCGImage:image.CGImage];
   _board = [SKSpriteNode spriteNodeWithTexture:backgroundTexture];
-  [_board setScale:0.5];
+    [_board setScale:IS_RETINA?.5f:1.f];
   _board.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
   [self addChild:_board];
 }
